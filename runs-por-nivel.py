@@ -38,13 +38,14 @@ async def on_message(message):
                 await message.channel.send(f"Você precisa fazer {ch_por_nivel} CH's da run para upar pro nível {int(nivel) + 1}.")
                 await message.channel.send(f"Os cálculos foram feitos tendo como base 4250% de XP contando com o 500% padrão.")
             else:
-                await message.channel.send("Digite um nível entre 150 e 170, ou a informação ainda não está disponível.")
+                await message.channel.send("Digite um nível entre 150 e 170")
         
-        except (IndexError, ValueError):
-            await message.channel.send("Por favor, forneça um número válido de nível após o comando. Exemplo: `!calcular 150`")
+        except Exception:
+            await message.channel.send("Digite um nível entre 150 e 170, ou a informação ainda não está disponível entre em contato com aowys no discord.")
         
-    if message.content.startswith('!me mama'):
+    elif message.content.startswith('!me mama'):
         await message.channel.send(f"glub glub!!")
+        await message.channel.send(f"só pros brother eim glub glub!!")
 
 # Rodar o bot
 client.run(TOKEN)
