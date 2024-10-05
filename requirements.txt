@@ -1,2 +1,1 @@
-discord
-math
+discord==2.3.0
