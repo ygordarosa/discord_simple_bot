@@ -42,6 +42,9 @@ async def on_message(message):
         
         except (IndexError, ValueError):
             await message.channel.send("Por favor, forneça um número válido de nível após o comando. Exemplo: `!calcular 150`")
+        
+        if message.content.startswith('!me mama'):
+            await message.channel.send(f"glub glub!!")
 
 # Rodar o bot
 client.run(TOKEN)
